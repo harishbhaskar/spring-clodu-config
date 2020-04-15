@@ -37,7 +37,7 @@ pipeline
           steps
           {
              
-               dir("/var/lib/jenkins/workspace/fullDemoPavan/demo/company/"){
+               dir("demo/company/"){
                    script { 
                        namee=STAGE_NAME
               sh 'mvn compile'
@@ -48,7 +48,7 @@ pipeline
           steps
           {
         
-              dir("/var/lib/jenkins/workspace/fullDemoPavan/demo/company/"){
+              dir("demo/company/"){
                   script {
                       namee=STAGE_NAME
               sh 'mvn install'
