@@ -2,7 +2,7 @@
 pipeline
 {
  environment {
-    registry = "m1056287/full"
+    registry = "m1055874/full"
     registryCredential = 'dockerhub'
     dockerImage=''
   }   
@@ -16,7 +16,7 @@ pipeline
           {
               script {
                namee=STAGE_NAME
-          git 'https://github.com/natam369/fullDemo.git'
+          git 'https://github.com/krishanthini2998/fullDemo.git'
           } }
       }
       stage('maven clean old packages stage')
@@ -81,7 +81,7 @@ pipeline
 	steps {
                 script {
                     namee=STAGE_NAME
-                sh "docker run -d -it -p 8086:8080 --name company_container -v /var/lib/tomcat8/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml -v /var/lib/tomcat8/conf/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml m1056287/full:$BUILD_NUMBER "
+                sh "docker run -d -it -p 8086:8080 --name company_container -v /var/lib/tomcat8/conf/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml -v /var/lib/tomcat8/conf/context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml m1055874/full:$BUILD_NUMBER "
             } }
     }
   }
@@ -95,7 +95,7 @@ post
 	 from: '',
 	 replyTo: '',
 	 subject: "Success pipeline ${currentBuild.fullDisplayName}",
-	 to: 'natammegasachin369@gmail.com'  
+	 to: 'krishanthinivasu@gmail.com'  
     }
     failure
     {
@@ -105,7 +105,7 @@ post
 	 from: '',
 	 replyTo: '',
 	 subject: "Failure pipeline ${currentBuild.fullDisplayName}",
-	 to: 'natammegasachin369@gmail.com'  
+	 to: 'krishanthinivasu@gmail.com'  
     }
     }
 }
