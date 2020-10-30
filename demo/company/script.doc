@@ -2,7 +2,7 @@
 pipeline
 {
  environment {
-    registry = "m1055874/full"
+    registry = "M1056243/full"
     registryCredential = 'dockerhub'
     dockerImage=''
   }   
@@ -16,7 +16,7 @@ pipeline
           {
               script {
                namee=STAGE_NAME
-          git 'https://github.com/krishanthini2998/fullDemo.git'
+          git 'https://github.com/harijai009/fullDemo.git'
           } }
       }
       stage('maven clean old packages stage')
@@ -95,7 +95,7 @@ post
 	 from: '',
 	 replyTo: '',
 	 subject: "Success pipeline ${currentBuild.fullDisplayName}",
-	 to: 'krishanthinivasu@gmail.com'  
+	 to: 'harijai009@gmail.com'  
     }
     failure
     {
@@ -105,7 +105,7 @@ post
 	 from: '',
 	 replyTo: '',
 	 subject: "Failure pipeline ${currentBuild.fullDisplayName}",
-	 to: 'krishanthinivasu@gmail.com'  
+	 to: 'harijai009@gmail.com'  
     }
     }
 }
